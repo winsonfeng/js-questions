@@ -5,7 +5,6 @@
 
 <details><summary><b>答案</b></summary>
 <p>
-markdown默认转译了，写的时候两斜杆写成一个斜杆
 
 ``` regexp
 ^[a-zA-Z][\u4e00-\u9fa5\w]{8,20}$

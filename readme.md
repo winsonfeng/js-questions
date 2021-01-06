@@ -121,3 +121,21 @@ g、避免在css中使用运算式
 </details>
 
 ---
+
+##### 6. vue组件跨级传参(爷孙互传)方法
+
+<details><summary><b>答案</b></summary>
+<p>
+
+``` javascript
+<爷组件 :data="'来自爷组件数据'" />
+<父组件 v-bind="$attrs" v-on="listeners" />
+子组件接收Props data
+
+// 期间父组件相当于中间人，同时父组件同样可以接收爷给的数据
+```
+
+</p>
+</details>
+
+---

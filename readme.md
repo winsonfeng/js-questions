@@ -152,3 +152,33 @@ g、避免在css中使用运算式
 
 </p>
 </details>
+
+---
+
+##### 8. 数组去重(非ES6)
+
+<details><summary><b>答案</b></summary>
+<p>
+
+正则零宽度正回顾后发断言,它断言自身出现的位置的前面能匹配表达式exp
+``` javascript
+/*
+@param 思路 将数组的第一项跟后面的所有项相比，不包含在内的一项push到新数组里面，最后一项不用比直接push
+*/
+let arr = [11, 2, 33, 4, 2, 15, 2, 11, 2, 15, 15]
+let newArr = []
+for (let i = 0; i < arr.length - 1; i++) {
+    //定义剩余项
+    let arr2 = arr.slice(i + 1)
+    if (arr2.indexOf(arr[i]) === -1) {
+        newArr.push(arr[i])
+    }
+}
+//最后一项直接push
+newArr.push(arr[arr.length - 1])
+console.log(newArr)
+```
+
+</p>
+</details>
+

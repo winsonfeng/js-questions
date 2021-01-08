@@ -139,3 +139,16 @@ g、避免在css中使用运算式
 </details>
 
 ---
+
+##### 7. 正则获取'https://www.baidu.com/?page=1'中的'page=1'
+
+<details><summary><b>答案</b></summary>
+<p>
+
+正则零宽度正回顾后发断言,它断言自身出现的位置的前面能匹配表达式exp
+``` javascript
+/(?<=\?).+/g
+```
+
+</p>
+</details>
